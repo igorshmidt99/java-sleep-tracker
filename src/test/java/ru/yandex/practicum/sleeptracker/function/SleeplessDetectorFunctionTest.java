@@ -41,7 +41,7 @@ class SleeplessDetectorFunctionTest {
     void shouldReturnZeroSleeplessNightWhenHasNoSleeplessNight() {
         SleeplessDetectorFunction sleeplessDetectorFunction = new SleeplessDetectorFunction();
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd.MM.yy HH:mm");
-        SleepAnalysisResult actual = sleeplessDetectorFunction.apply(List.of( new SleepingSession(
+        SleepAnalysisResult actual = sleeplessDetectorFunction.apply(List.of(new SleepingSession(
                         LocalDateTime.parse("01.10.25 22:15", formatter),
                         LocalDateTime.parse("02.10.25 08:00", formatter),
                         SleepStatus.GOOD),
